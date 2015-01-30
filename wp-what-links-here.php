@@ -57,7 +57,6 @@ if( ! class_exists( 'Wp_Wlh' ) )
 class Wp_Wlh
 {
     var $version    = '1.0.1';
-    var $post_types = '';
 
     /**
      * Constructor.
@@ -68,9 +67,6 @@ class Wp_Wlh
      */
     protected function __construct()
     {
-        // allowed post types
-        $this->post_types = apply_filters( 'wp_wlh_post_types', array_keys( get_post_types( array( 'public' => true ), 'names' ) ) );
-
         // define cron interval, default: 7200 seconds = every two hours
         if( ! defined( 'WP_WLH_CRON_INTERVAL' ) ) define( 'WP_WLH_CRON_INTERVAL', 7200 );
 
@@ -401,7 +397,7 @@ class Wp_Wlh
             return $html;
 
         $query = new WP_Query( apply_filters( 'wp_wlh_shortcode_query_args', array(
-             'post_type'        => $this->post_types
+             'post_type'        => $this->post_types()
             ,'post_status'      => array( 'publish' )
             ,'post__in'         => $post__in
             ,'posts_per_page'   => -1
@@ -535,6 +531,18 @@ class Wp_Wlh
     /* retrieval methods **************************************************************************/
 
     /**
+     * Get allowed post types
+     *
+     * @since   1.0.2
+     * @access  public
+     * @return  void
+     */
+    public function post_types()
+    {
+        return apply_filters( 'wp_wlh_post_types', array_keys( get_post_types( array( 'public' => true ), 'names' ) ) );
+    }
+
+    /**
      * Get what's linking here.
      *
      * @since   1.0.1
@@ -630,7 +638,7 @@ class Wp_Wlh
             return false;
 
         // check post type
-        if( ! in_array( $post->post_type, array_values( $this->post_types ) ) )
+        if( ! in_array( $post->post_type, array_values( $this->post_types() ) ) )
             return false;
 
         return $post;
