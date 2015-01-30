@@ -39,7 +39,7 @@ Check out the [wiki section](https://github.com/diggy/wp-what-links-here/wiki/) 
 
 = Where can I report bugs or request new features? =
 
-Bugs related to the WP What Links Here plugin can be reported on the [WordPress support forums](http://wordpress.org/support/plugin/wp-what-links-here) or, preferably, on [GitHub](https://github.com/diggy/wp-what-links-here).
+Bugs related to the WP What Links Here plugin can be reported on the [WordPress support forums](https://wordpress.org/support/plugin/wp-what-links-here) or, preferably, on [GitHub](https://github.com/diggy/wp-what-links-here).
 
 Idem for feature requests.
 
@@ -49,10 +49,17 @@ Fork the plugin source code on [GitHub](https://github.com/diggy/wp-what-links-h
 
 == Changelog ==
 
+= 1.0.2 - 30/01/2015 = 
+* fixes issue with multisite
+* supports all public post types out of the box, no config plugin needed
+
 = 1.0.1 - 05/03/2014 = 
 * Initial release 1.0.1
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+fixes issue with multisite; supports all public post types out of the box, no config plugin needed
 
 = 1.0.1 =
 version 1.0.1
