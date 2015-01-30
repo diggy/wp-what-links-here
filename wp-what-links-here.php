@@ -35,7 +35,7 @@
  * @author     Peter J. Herrel <peterherrel@gmail.com>
  * @copyright  Copyright 2014 Peter J. Herrel
  * @license    http://www.gnu.org/licenses/gpl.txt GPL3
- * @link       http://wordpress.org/plugins/wp-what-links-here/
+ * @link       https://wordpress.org/plugins/wp-what-links-here/
  * @link       https://github.com/diggy/wp-what-links-here/wiki/
  * @link       http://peterherrel.com/wordpress/plugins/wp-what-links-here/
  * @since      1.0.1
@@ -813,6 +813,7 @@ class Wp_Wlh
         if( $file === plugin_basename( __FILE__ ) )
         {
             $links[] = sprintf( '<a target="_blank" href="%s">%s</a>', esc_url( 'https://github.com/diggy/wp-what-links-here/wiki/' ), __( 'Wiki', 'wp_wlh' ) );
+            $links[] = sprintf( '<a target="_blank" href="%s">%s</a>', esc_url( 'https://wordpress.org/support/plugin/wp-what-links-here' ), __( 'Support', 'wp_wlh' ) );
             $links[] = sprintf( '<a target="_blank" href="%s">%s</a>', esc_url( 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BULEF95ABJC4Y' ), __( 'Donate', 'wp_wlh' ) );
         }
 
