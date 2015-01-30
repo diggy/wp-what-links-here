@@ -3,7 +3,7 @@
  * Plugin Name: WP What Links Here
  * Plugin URI: http://wordpress.org/plugins/wp-what-links-here/
  * Description: This plugin implements "what links here" functionality in WordPress, like seen on e.g. Wikipedia.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Peter J. Herrel
  * Author URI: http://peterherrel.com/
  * License: GPL3
@@ -56,7 +56,7 @@ if( ! class_exists( 'Wp_Wlh' ) )
  */
 class Wp_Wlh
 {
-    var $version    = '1.0.1';
+    var $version    = '1.0.2';
 
     /**
      * Constructor.
